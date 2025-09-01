@@ -1,0 +1,86 @@
+.mainContainer {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contactCreationContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  border-radius: 0.3rem;
+  width: 20rem;
+  height: 16rem;
+  margin-bottom: 1rem;
+
+  & form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    .inputsGroups {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      margin: 0.3rem 0;
+
+      & label {
+        color: #f0f8ff;
+      }
+
+      & input {
+        padding-left: 0.2rem;
+        transition: all 0.15s ease-in-out;
+      }
+
+      & * {
+        height: 1.8rem;
+        border-radius: 0.3rem;
+        outline: none;
+        &:focus {
+          box-shadow: 0px 3px 0px 1px rgba(228, 148, 148, 0.75);
+        }
+      }
+    }
+
+    & input[type="submit"] {
+      width: 5rem;
+      height: 1.5rem;
+      margin-top: 0.5rem;
+      cursor: pointer;
+    }
+  }
+}
+
+.mainContainer {
+  & .contactCards {
+    overflow-y: scroll;
+    max-height: 30rem;
+    width: 90%;
+    border: 1px solid #333;
+    border-radius: 0.3rem;
+    scrollbar-width: none;
+    background-color: #333;
+
+    & ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin: 1rem;
+
+      & li {
+        background-color: #fff;
+        text-align: center;
+        width: fit-content;
+        border: 1px solid #333;
+        border-radius: 0.3rem;
+        padding: 0.5rem;
+      }
+    }
+  }
+}
