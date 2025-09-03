@@ -13,7 +13,7 @@
   border-radius: 0.3rem;
   width: 20rem;
   height: 16rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.2rem;
 
   & form {
     display: flex;
@@ -34,6 +34,7 @@
       & input {
         padding-left: 0.2rem;
         transition: all 0.15s ease-in-out;
+        text-transform: capitalize;
       }
 
       & * {
@@ -48,10 +49,41 @@
 
     & input[type="submit"] {
       width: 5rem;
-      height: 1.5rem;
+      /* height: 1.5rem; */
       margin-top: 0.5rem;
       cursor: pointer;
+      border-radius: 0.3rem;
+      padding: 0.3rem;
+      font-size: large;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        transition: all 0.3s ease-in-out;
+        animation: btnTransition 0.5s forwards;
+      }
     }
+  }
+}
+
+@keyframes btnTransition {
+  0% {
+  }
+  25% {
+    background-color: transparent;
+    filter: invert(100%);
+  }
+  50% {
+    rotate: 5deg;
+  }
+  55% {
+    rotate: -5deg;
+  }
+  75% {
+    scale: 1.1;
+  }
+  100% {
+    background-color: #86f386;
+    width: 5.5rem;
   }
 }
 
@@ -80,7 +112,43 @@
         border: 1px solid #333;
         border-radius: 0.3rem;
         padding: 0.5rem;
+        min-width: 10rem;
+
+        & p {
+          text-transform: capitalize;
+          &:first-child {
+            margin-bottom: 0.3rem;
+          }
+        }
+
+        & .removeBtn {
+          height: 1.5rem;
+          border-radius: 0.3rem;
+          width: 5rem;
+          margin-top: 0.5rem;
+          cursor: pointer;
+          transition: all 0.2s ease-in-out;
+
+          &:hover {
+            background-color: #ff4545;
+            color: #fff;
+          }
+        }
       }
     }
+  }
+}
+
+.mainContainer {
+  & .errorBox {
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff4545;
+    height: 2rem;
+    margin-bottom: 0.5rem;
+    width: 20rem;
+    border-radius: 0.3rem;
   }
 }
